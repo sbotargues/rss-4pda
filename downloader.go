@@ -22,7 +22,7 @@ import (
 )
 
 const (
-	topicURLPattern = "http://4pda.ru/forum/index.php?showtopic=%d"
+	topicURLPattern = "https://4pda.to/forum/index.php?showtopic=%d"
 	pageSize        = 20
 	maxPostCount    = 30
 	baseTimeZone    = 3
@@ -203,7 +203,7 @@ func (d *PostDownloader) findPosts(doc *goquery.Document, includePinned bool) (t
 				if post.Link == "" {
 					postLink := s.AttrOr("href", "")
 					if strings.HasPrefix(postLink, "//") {
-						postLink = "http:" + postLink
+						postLink = "https:" + postLink
 					}
 					post.Link = postLink
 				}
