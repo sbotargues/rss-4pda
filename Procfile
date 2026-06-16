@@ -1,1 +1,1 @@
-web: ./rss-4pda --port $PORT
+web: ./out --port $PORT
